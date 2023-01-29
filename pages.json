@@ -1,0 +1,163 @@
+{
+	"pages": [{
+			"path": "pages/login/login",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/recomment/recomment",
+			   "style": {
+			        "app-plus": {  
+			            "subNVues":[{  
+			                "id": "popup", // 唯一标识  
+			                "path": "pages/recomment/video", // 页面路径  
+			                //"type": "popup",  //原生子窗口内置样式，可取值：'popup',弹出层；"navigationBar",导航栏
+			                "style": {  
+			                    "position":"absolute",
+			                    "height": "60px",
+			                    "top":"40px",
+			                    "background":"transparent"
+			                }  
+			            }]  
+			        } 
+			    }
+
+		}, {
+			"path": "pages/social/social"
+
+		}, {
+			"path": "pages/employment/employment"
+		}, {
+			"path": "pages/message/message"
+		}, {
+			"path": "pages/person/person",
+			"style": {
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 50
+			}
+		}, {
+			"path": "pages/photo/photo"
+		}, {
+			"path": "pages/register/register"
+		}
+	],
+	"subPackages": [{
+		"root": "subpkg",
+		"pages": [{
+			"path": "share/share"
+		},  {
+			"path": "like/like"
+		},{
+			"path": "comment/comment"
+		}, {
+			"path": "information/information"
+		}, {
+			"path": "group/group"
+		}, {
+			"path": "xiangqing/xiangqing"
+		}, {
+			"path": "checkPerson/checkPerson"
+		}, {
+			"path": "privilege/privilege",
+			"style": {
+				"navigationBarTitleText": "我的特权"
+			}
+
+		}, {
+			"path": "activity/activity",
+			"style": {
+				"navigationBarTitleText": "活动",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "emotionTesting/emotionTesting",
+			"style": {
+				"navigationBarTitleText": "情感测试",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "search/search",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+
+		}, {
+			"path": "editDetail/editDetail",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		},{
+			"path": "billboard/billboard",
+			"style": {
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 50
+			}
+
+		}]
+	}],
+
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarBackgroundColor": "#fff",
+		"backgroundColor": "#fff",
+		"navigationStyle": "custom",
+		"style": {
+			"app-plus": {
+				"titleNView": false
+			}
+		}
+	},
+	"tabBar": {
+		"selectedColor": "#ffb4c0",
+		"list": [{
+				"pagePath": "pages/recomment/recomment",
+				"text": "约吧",
+				"iconPath": "static/icon/tabs/compromise.png",
+				"selectedIconPath": "static/icon/tabs/compromise-active.png"
+			},
+			{
+				"pagePath": "pages/social/social",
+				"text": "广场",
+				"iconPath": "static/icon/tabs/square.png",
+				"selectedIconPath": "static/icon/tabs/square-active.png"
+			},
+			{
+				"pagePath": "pages/employment/employment",
+				"text": "就业",
+				"iconPath": "static/icon/tabs/employment.png",
+				"selectedIconPath": "static/icon/tabs/employment-active.png"
+			},
+			{
+				"pagePath": "pages/message/message",
+				"text": "消息",
+				"iconPath": "static/icon/tabs/message.png",
+				"selectedIconPath": "static/icon/tabs/message-active.png"
+			},
+			{
+				"pagePath": "pages/person/person",
+				"text": "我的",
+				"iconPath": "static/icon/tabs/my.png",
+				"selectedIconPath": "static/icon/tabs/my-active.png"
+			}
+		]
+	},
+	"condition": { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [{
+			"name": "", //模式名称
+			"path": "", //启动页面，必选
+			"query": "" //启动参数，在页面的onLoad函数里面得到
+		}]
+	}
+}
